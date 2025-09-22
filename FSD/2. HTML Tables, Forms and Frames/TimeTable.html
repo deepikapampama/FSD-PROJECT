@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Class Timetable Example</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+    table {
+      border-collapse: separate;
+      background: white;
+      width: 100%;
+      max-width: 1100px;
+    }
+    caption {
+      caption-side: top;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    th, td {
+      text-align: center;
+      vertical-align: middle;
+      min-width: 90px;
+      padding: 8px;
+    }
+    th {
+      background: #2f6f9f;
+      color: white;
+      font-weight: 600;
+    }
+    .side-day {
+      text-align: left;
+      padding-left: 12px;
+      font-weight: 600;
+      background: #e9f2f8;
+    }
+    .vertical-merge {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: #ffd; 
+    }
+  </style>
+</head>
+<body>
+
+  <table border="1" cellspacing="4" cellpadding="6" aria-label="Weekly timetable">
+    <caption>IT - Weekly Timetable (Example)</caption>
+
+    <thead>
+      <tr>
+        <th>DAY</th>
+        <th>Period 1<br><small>09:00 - 10:00</small></th>
+        <th>Period 2<br><small>10:00 - 11:00</small></th>
+        <th>BREAK<br><small>11:00 - 11:10</small></th>
+        <th>Period 3<br><small>11:10 - 12:10</small></th>
+        <th>Period 4<br><small>12:10 - 13:10</small></th>
+        <th>LUNCH<br><small>13:10 - 14:10</small></th>
+        <th>Period 5<br><small>14:10 - 15:10</small></th>
+        <th>Period 6<br><small>15:10 - 16:30</small></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="side-day">MONDAY</td>
+        <td>FSD Lab<br><small>(IT Computer Lab)</small></td>
+        <td>FSD Lab</td>
+        <td class="vertical-merge" rowspan="6">BREAK</td>
+        <td>FSD</td>
+        <td>AOR</td>
+        <td class="vertical-merge" rowspan="6">LUNCH</td>
+        <td>DWDM</td>
+        <td>AT&CD</td>
+      </tr>
+
+      <tr>
+        <td class="side-day">TUESDAY</td>
+        <td>AT&CD</td>
+        <td>AOR</td>
+        <td colspan="2">TT</td>
+        <td colspan="2">CN Lab</td>
+      </tr>
+
+      <tr>
+        <td class="side-day">WEDNESDAY</td>
+        <td colspan="2">Communication Skill</td>
+        <td>CN</td>
+        <td>DWDM</td>
+        <td>AT&CD</td>
+        <td>AJ</td>
+      </tr>
+
+      <tr>
+        <td class="side-day">THURSDAY</td>
+        <td>CN</td>
+        <td>AJ</td>
+        <td colspan="2">Aptitude</td>
+        <td>AOR</td>
+        <td>AOR</td>
+      </tr>
+
+      <tr>
+        <td class="side-day">FRIDAY</td>
+        <td>AJ</td>
+        <td>CN</td>
+        <td>AOR</td>
+        <td>DWDM</td>
+        <td colspan="2">AJ Lab</td>
+      </tr>
+
+      <tr>
+        <td class="side-day">SATURDAY</td>
+        <td colspan="2">UI Lab</td>
+        <td>DWDM</td>
+        <td>AJ</td>
+        <td>CN</td>
+        <td>TPL</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
