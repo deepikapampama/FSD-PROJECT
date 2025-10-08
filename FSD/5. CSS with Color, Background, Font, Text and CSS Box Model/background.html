@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Example</title>
+  <style>
+    body {
+      height: 1500px; /* Just to enable scrolling */
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-position: center 50%;   /* halfway down the page */
+      background-attachment: fixed;      /* remains fixed when scrolling */
+      background-size: 300px auto;       /* resize image */
+      transform: scaleX(-1);             /* tilt horizontally (mirror effect) */
+    }
+  </style>
+</head>
+<body>
+  <h1>Scroll the page</h1>
+  <p>The background image is fixed halfway down and flipped horizontally.</p>
+</body>
+</html>
