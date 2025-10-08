@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Forms</title>
+  <style>
+    /* 1. Simple Selectors */
+    h1 { color: darkblue; }                /* Element selector */
+    #unique { color: red; }                /* ID selector */
+    .highlight { background: yellow; }     /* Class selector */
+    p, li { font-size: 16px; }             /* Group selector */
+    * { font-family: Arial; }              /* Universal selector */
+
+    /* 2. Combinator Selectors */
+    div p { color: green; }                /* Descendant */
+    div > p { font-weight: bold; }         /* Child */
+    h2 + p { color: purple; }              /* Adjacent sibling */
+    h2 ~ p { font-style: italic; }         /* General sibling */
+
+    /* 3. Pseudo-class selector */
+    a:hover { color: orange; }
+
+    /* 4. Pseudo-element selector */
+    p::first-line { font-weight: bold; }
+    p::first-letter { font-size: 24px; color: brown; }
+
+    /* 5. Attribute selector */
+    input[type="text"] { border: 2px solid blue; }
+    input[required] { background: #fdd; }
+  </style>
+</head>
+<body>
+  <h1>CSS Selector Forms</h1>
+  <h2 id="unique">This is an ID Selector Example</h2>
+  <p class="highlight">This paragraph has a class applied.</p>
+
+  <div>
+    <p>Child & Descendant example inside div</p>
+  </div>
+
+  <h2>Heading 2</h2>
+  <p>Paragraph right after h2 (Adjacent sibling).</p>
+  <p>Another paragraph after h2 (General sibling).</p>
+
+  <a href="#">Hover over this link</a>
+
+  <form>
+    <input type="text" placeholder="Text Input">
+    <input type="password" placeholder="Password" required>
+  </form>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+</body>
+</html>
