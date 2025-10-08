@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Object Example</title>
+</head>
+<body>
+    <h2>Using String Object Properties and Methods</h2>
+    <p id="str"></p>
+
+    <script>
+        let text = "JavaScript is Powerful";
+        let output = `
+            Original String: ${text}<br>
+            Length: ${text.length}<br>
+            Uppercase: ${text.toUpperCase()}<br>
+            Lowercase: ${text.toLowerCase()}<br>
+            Substring (0,10): ${text.substring(0,10)}<br>
+            Replace: ${text.replace("Powerful", "Awesome")}
+        `;
+        document.getElementById("str").innerHTML = output;
+    </script>
+</body>
+</html>

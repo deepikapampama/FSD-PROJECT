@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Object Example</title>
+</head>
+<body>
+    <h2>Using Math Object Properties and Methods</h2>
+    <p id="math"></p>
+
+    <script>
+        let num = 16.75;
+        let info = `
+            PI: ${Math.PI}<br>
+            Square Root of 16: ${Math.sqrt(16)}<br>
+            Round(16.75): ${Math.round(num)}<br>
+            Ceil(16.75): ${Math.ceil(num)}<br>
+            Floor(16.75): ${Math.floor(num)}<br>
+            Random Number (1–100): ${Math.floor(Math.random() * 100) + 1}
+        `;
+        document.getElementById("math").innerHTML = info;
+    </script>
+</body>
+</html>

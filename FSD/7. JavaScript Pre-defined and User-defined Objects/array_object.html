@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h2>Using Array Object Properties and Methods</h2>
+    <p id="output"></p>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        fruits.push("Mango"); // add element
+        fruits.sort(); // sort alphabetically
+        fruits.reverse(); // reverse order
+
+        let result = `
+            Array Elements: ${fruits.join(", ")}<br>
+            Array Length: ${fruits.length}<br>
+            First Element: ${fruits[0]}<br>
+            Index of Banana: ${fruits.indexOf("Banana")}
+        `;
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>

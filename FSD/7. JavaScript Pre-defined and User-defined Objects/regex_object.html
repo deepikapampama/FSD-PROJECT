@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Object Example</title>
+</head>
+<body>
+    <h2>Using RegExp Object Properties and Methods</h2>
+    <p id="regex"></p>
+
+    <script>
+        let text = "JavaScript is fun. I love JavaScript!";
+        let pattern = /JavaScript/g;
+
+        let result = `
+            Original Text: ${text}<br>
+            Pattern Test: ${pattern.test(text)}<br>
+            Matches Found: ${text.match(pattern)}<br>
+            Replaced Text: ${text.replace(pattern, "JS")}
+        `;
+        document.getElementById("regex").innerHTML = result;
+    </script>
+</body>
+</html>

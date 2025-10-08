@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Example</title>
+</head>
+<body>
+    <h2>Using Document Object Properties and Methods</h2>
+    <p id="info"></p>
+
+    <script>
+        document.bgColor = "lightyellow"; // sets background color
+        document.title = "Document Object Demo"; // sets page title
+
+        let info = `
+            Document Title: ${document.title}<br>
+            URL: ${document.URL}<br>
+            Last Modified: ${document.lastModified}<br>
+            Domain: ${document.domain}
+        `;
+        document.getElementById("info").innerHTML = info;
+    </script>
+</body>
+</html>

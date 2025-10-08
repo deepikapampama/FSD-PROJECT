@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date Object Example</title>
+</head>
+<body>
+    <h2>Using Date Object Properties and Methods</h2>
+    <p id="dateInfo"></p>
+
+    <script>
+        let now = new Date();
+
+        let result = `
+            Current Date: ${now.toDateString()}<br>
+            Current Time: ${now.toLocaleTimeString()}<br>
+            Year: ${now.getFullYear()}<br>
+            Month: ${now.getMonth() + 1}<br>
+            Day: ${now.getDate()}
+        `;
+        document.getElementById("dateInfo").innerHTML = result;
+    </script>
+</body>
+</html>
