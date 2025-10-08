@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background-color: #f0f0f0; }
+        label, input { display: block; margin: 10px 0; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Registration Form Validation</h2>
+
+    <form onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <label>Mobile:</label>
+        <input type="text" id="mobile" placeholder="Enter Mobile Number">
+
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="Enter Email">
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p id="message" class="error"></p>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+            let msg = "";
+
+            // i. Name validation
+            let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            if (!namePattern.test(name)) {
+                msg += "Invalid Name (Must start with letter, min length 6)<br>";
+            }
+
+            // ii. Mobile validation
+            let mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                msg += "Invalid Mobile Number (Must be 10 digits)<br>";
+            }
+
+            // iii. Email validation
+            let emailPattern = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                msg += "Invalid Email Format (example: name@email.com)<br>";
+            }
+
+            if (msg) {
+                document.getElementById("message").innerHTML = msg;
+                return false; // prevent form submission
+            } else {
+                alert("Registration Successful!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

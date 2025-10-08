@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions Example</title>
+</head>
+<body>
+    <h2>JavaScript Functions Example</h2>
+
+    <script>
+        // i. Factorial
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        // ii. Fibonacci Series
+        function fibonacci(n) {
+            let a = 0, b = 1, next;
+            let series = [a, b];
+            for (let i = 2; i < n; i++) {
+                next = a + b;
+                series.push(next);
+                a = b;
+                b = next;
+            }
+            return series.join(", ");
+        }
+
+        // iii. Prime Numbers up to n
+        function primesUpToN(n) {
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            return primes.join(", ");
+        }
+
+        // iv. Palindrome Check
+        function isPalindrome(num) {
+            let str = num.toString();
+            let reversed = str.split("").reverse().join("");
+            return str === reversed ? "Palindrome" : "Not Palindrome";
+        }
+
+        // Prompt user for number
+        let num = parseInt(prompt("Enter a number:"));
+
+        document.write("<b>Number:</b> " + num + "<br>");
+        document.write("<b>Factorial:</b> " + factorial(num) + "<br>");
+        document.write("<b>Fibonacci Series:</b> " + fibonacci(num) + "<br>");
+        document.write("<b>Prime Numbers:</b> " + primesUpToN(num) + "<br>");
+        document.write("<b>Palindrome Check:</b> " + isPalindrome(num));
+    </script>
+</body>
+</html>
